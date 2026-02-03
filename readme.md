@@ -3,7 +3,8 @@
 1. without facet configured:
     - OK: Spring view displays the correct beans
     - BUG: Structure view does not show the injection information
-    - BUG: Spring Debugger does not work
+    - BUG: Spring Debugger does not work for main class
+    - OK: Spring Debugger works for test class
   1.1 Main module:
    - OK: main module bean classes have the correct gutter icons
    - OK: AutowireBean... action is available and suggests all beans
