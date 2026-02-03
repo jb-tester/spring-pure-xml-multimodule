@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <import resource="lib-config.xml"/>
+
+  <bean name="appBean1" class="com.mytests.spring.pureXmlMultimodule.AppModuleBean1" >
+    <constructor-arg ref="libBean1"/>
+    <constructor-arg ref="appBean2"/>
+    <property name="someProp" value="appModuleBean1Prop" />
+  </bean>
+  <bean id="appBean2" class="com.mytests.spring.pureXmlMultimodule.AppModuleBean2">
+    <constructor-arg value="appModuleBean2Prop2"/>
+    <property name="someProp" value="appModuleBean2Prop"/>
+  </bean>
+  <bean name="libBean1" class="com.mytests.spring.pureXmlMultimodule.LibBean1" >
+    <constructor-arg value="libModuleProp2"/>
+    <constructor-arg ref="libBean2"/>
+    <property name="someProp" value="libModuleProp" />
+  </bean>
+
+</beans>
